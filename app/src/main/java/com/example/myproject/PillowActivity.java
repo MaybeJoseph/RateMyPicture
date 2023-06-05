@@ -38,7 +38,7 @@ public class PillowActivity extends AppCompatActivity {
         btnReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+            tvDesc.setText("Return")
 
 
             }
@@ -48,8 +48,7 @@ public class PillowActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int random_int = (int)Math.floor(Math.random() * (maxCash - minCash + 1) + minCash);
-                rejectResult++;
-
+                tvDesc.setText("Disliked" + rejectResult++;);
 
 
 
@@ -60,16 +59,14 @@ public class PillowActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int random_int = (int)Math.floor(Math.random() * (maxCash - minCash + 1) + minCash);
-                savedResult++;
-
+                tvDesc.setText("Saved" + random_int + savedResult++;);
 
             }
         });
         btnLove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loveResult++;
-
+                tvDesc.setText("Your Likes" + loveResult++;);
 
             }
         });
@@ -78,7 +75,7 @@ public class PillowActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int random_int = (int)Math.floor(Math.random() * (maxCash - minCash + 1) + minCash);
-
+                tvDesc.setText("Cash: " + random_int );
 
             }
         });
@@ -87,8 +84,7 @@ public class PillowActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int random_int = (int)Math.floor(Math.random() * (maxCash - minCash + 1) + minCash);
-                likeResult++;
-
+                tvDesc.setText("Likes" +  random_int + likeResult++;);
 
 
             }
@@ -97,9 +93,7 @@ public class PillowActivity extends AppCompatActivity {
         btnViewSaved.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewSavedResult++;
-
-
+                tvDesc.setText("Saved" + viewSavedResult++;);
 
             }
         });
@@ -153,7 +147,7 @@ public class PillowActivity extends AppCompatActivity {
                //dont make a pillow
                System.out.println(player.getName() + " didn't make a pillow\nLose $100 for 200 health.");
                displayStats();
-               Util.pauseConsole();
+
            }
        });
 
